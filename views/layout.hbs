@@ -1,18 +1,50 @@
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>{{appTitle}}</title>
+    <title>Gluten-Free Life Club</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="/js/style.css"></script>
+    
   </head>
-
   <body>
-
-    {{{body}}}
-
-    <script src="/js/script.js"></script>
+     <div class="nav-container">
+      <nav>
+        <div>
+          <a href="/">
+            
+            GLUTEN MORGAN
+          </a>
+        </div>
+        <ul class="nav-links">
+          {{#if isLoggedIn}}
+            <li>
+              <a href="/recipe/add">Add a recipe</a>
+            </li>
+             <li>
+              <a href="/user/{{username}}">Profile</a>
+            </li>
+            <li>
+              <a href="/auth/logout">Logout</a>
+            </li>
+          {{else}}
+            <li>
+              <a href="/auth/signup">Create account</a>
+            </li>
+            <li>
+              <a href="/auth/login">Login</a>
+            </li>
+          {{/if}}
+        </ul>
+      </nav>
+    </div>
+    <main class="container">{{{body}}}</main>
+    
+    <footer>&copy; Gluten Free Life Club | 2022</footer>
+   
   </body>
+
+
 
 </html>

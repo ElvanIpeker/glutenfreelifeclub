@@ -28,6 +28,7 @@ const MongoStore = require("connect-mongo");
 // Connects the mongo uri to maintain the same naming structure
 const MONGO_URI = require("../utils/consts");
 
+
 // Middleware configuration
 module.exports = (app) => {
   // In development environment the app logs
@@ -61,4 +62,11 @@ module.exports = (app) => {
       }),
     })
   );
+  app.use((req, res, next) => {
+    if (req.session.user) {
+      res.locals.isLoggedIn = true;
+
+    }
+    next();
+  });
 };
