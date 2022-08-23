@@ -1,3 +1,7 @@
+
+
+
+require('dotenv').config()
 // We reuse this import in order to have access to the `body` property in requests
 const express = require("express");
 
@@ -41,8 +45,10 @@ module.exports = (app) => {
 
   // Normalizes the path to the views folder
   app.set("views", path.join(__dirname, "..", "views"));
+
   // Sets the view engine to handlebars
   app.set("view engine", "hbs");
+
   // AHandles access to the public folder
   app.use(express.static(path.join(__dirname, "..", "public")));
 
