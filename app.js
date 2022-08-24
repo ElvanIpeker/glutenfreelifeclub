@@ -35,6 +35,11 @@ const RecipeAddRoutes = require("./routes/recipe.routes");
 
 app.use("/recipe", RecipeAddRoutes);
 
+const userRoutes = require("./routes/user.routes");
+app.use("/user", userRoutes);
+
+module.exports = app;
+
 
 
 

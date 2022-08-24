@@ -1,19 +1,124 @@
 body {
   
-    background-color: rgb(233, 200, 183);
-    font: 1em sans-serif;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 200;
-    font-style: italic;
-    
-    padding: 50px;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    margin:0 auto;
+    padding:0 1.25 rem;
+    font-family: "lato",sans-serif;
+}
+:root{
+  --primary-bg-color:rgb(78,147,131);
+
 }
 
-a {
-  color: #00b7ff;
+.header {
+  background-color: #F1F1F1;
+  text-align: center;
+  padding: 20px;
 }
 
-h1 {
-  color: 15px;
+
+.nav-container {
+  background-color: #F1F1F1;
+  text-align: center;
+  padding: 20px;
+ 
+}
+nav {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+}
+nav {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+  background: #cddfe4;
+  padding: 1rem;
+}
+
+.footer {
+  background-color: #F1F1F1;
+  text-align: center;
+  padding: 10px;
+}
+
+
+.title {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+/************** BUTTONS **************/
+.button {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #093e4d 0,
+    #4c4e61 100%
+  );
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  height: 30px;
+  font-family: inherit;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding: 1rem 1rem;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.button:focus {
+  box-shadow: #84ab8f 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #85ab97 0 -3px 0 inset;
+}
+
+.button:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #657672 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button:active {
+  box-shadow: #699288 0 3px 7px inset;
+  transform: translateY(2px);
+}
+.header {
+  background-color: #F1F1F1;
+  text-align: center;
+  padding: 20px;
+
+}
+.footer {
+  background-color: #F1F1F1;
+  text-align: center;
+  padding: 10px;
 }

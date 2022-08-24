@@ -71,6 +71,7 @@ module.exports = (app) => {
   app.use((req, res, next) => {
     if (req.session.user) {
       res.locals.isLoggedIn = true;
+      res.locals.username = req.session.user.username;
 
     }
     next();

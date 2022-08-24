@@ -1,0 +1,63 @@
+<form action="/recipe/update/{{id}}" method="POST" enctype="multipart/form-data">
+   <label>
+    Recipe Name
+    <input type="text" name="name" value="{{name}}"/>
+    </label>
+    <br/>
+    <label>
+        Country of Origin
+        <input type="text" name="origin" value="{{origin}}"/>
+    </label>
+    <br/>
+    <label>
+    Servings
+    <input type="text" name="numServings" value="{{numServings}}"/>
+    </label>
+    <br/>
+    <label>
+        Calories per Serving
+        <input type="text" name="calorie" value="{{calorie}}"/>
+    </label>
+    <br/>
+    <label>
+        Cook Time
+        <input type="text" name="cookTimeMinutes" value="{{cookTimeMinutes}}"/>
+    </label>
+    <br/>
+    <label>
+   Ingredients
+    <input type="text" name="ingredients" value="{{ingredients}}"/>
+    </label>
+    <br/>
+    <label>
+        Instruction
+        <input type="text" name="instruction" value="{{instructions}}"/>
+    </label>
+    <br/>
+    <input type="file" name="image" value="{{imagePath}}" />
+    <br />
+
+    {{#if imagePath}}
+    <img src="{{imagePath}}" />
+  {{/if}}
+  <br />
+  <button type="submit">Submit</button>
+</form>
+{{#if errorMessage}}
+  {{errorMessage}}
+{{/if}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</form>

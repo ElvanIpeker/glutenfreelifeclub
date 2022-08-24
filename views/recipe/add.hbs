@@ -1,4 +1,4 @@
-<form action="/recipe/add" method="POST">
+<form action="/recipe/add" method="POST" enctype="multipart/form-data">
 <label>Recipe Name
     <input type="text" name="name" placeholder="name of the recipe">
 </label>
@@ -32,10 +32,21 @@
 <br/>
 <label>Instructions
     <input type="text" name="instructions" placeholder="prepare method">
+
 </label>
+
 <br/>
+<input type="file"name="image"/>
+<br/>
+{{#if img}}
+<img src="{{img}}"/>
+{{if}}
+
 <button type="submit">Submit</button>
 </form>
+{{#if errorMessage}}
+{{errorMessage}}
+{{/if}}
 
 
 

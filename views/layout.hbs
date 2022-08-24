@@ -14,7 +14,7 @@
         <div>
           <a href="/">
             
-            GLUTEN MORGAN EVERYONE!
+            GLUTEN MORGAN EVERYONE! {{#if isLoggedIn}} {{username}} {{/if}} !
           </a>
         </div>
         <ul class="nav-links">
@@ -23,7 +23,7 @@
               <a href="/recipe/add">Add a recipe</a>
             </li>
              <li>
-              <a href="/user/{{username}}">Profile</a>
+              <a href="/user/{{username}}">My Recipes</a>
             </li>
             <li>
               <a href="/auth/logout">Logout</a>
