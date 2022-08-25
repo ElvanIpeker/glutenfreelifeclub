@@ -1,8 +1,10 @@
 <style>
   div.gallery { margin: 5px; border: 1px solid #ccc; float: left; width: 180px;
-  } div.gallery:hover { border: 1px solid #777; } div.gallery img { width: 100%;
-  height: auto; } div.desc { padding: 15px; text-align: center; } .icon { width:
-  24 !important; height: 24 !important; }
+  } 
+  div.gallery:hover { border: 1px solid #777; } 
+  div.gallery img { width: 100%; height: auto; } 
+  div.desc { padding: 15px; text-align: center; } 
+  .icon { width:24 !important; height: 24 !important; }
 </style>
 
 {{#each recipes}}
@@ -10,7 +12,7 @@
     <a target="_blank" href="/recipe/{{id}}">
       <img src="{{imagePath}}"  width="200" height="100" />
     </a>
-    <div class="desc">
+    <div class="description">
       {{name}}
       <a href="/recipe/delete/{{id}}">
         <img class="icon" src="/images/delete_icon.png" />

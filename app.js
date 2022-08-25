@@ -28,7 +28,6 @@ const index = require("./routes/index.routes");
 app.use("/", index);
 
 const authRoutes = require("./routes/auth.routes");
-
 app.use("/auth", authRoutes);
 
 const RecipeAddRoutes = require("./routes/recipe.routes");
@@ -37,17 +36,14 @@ app.use("/recipe", RecipeAddRoutes);
 
 const userRoutes = require("./routes/user.routes");
 app.use("/user", userRoutes);
-
-module.exports = app;
-
-
-
-
-
-
-
-
-// ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 
 module.exports = app;
+
+
+
+
+
+
+
+
