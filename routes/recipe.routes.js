@@ -22,7 +22,7 @@ router.post("/add", isLoggedIn, uploadMiddleware.single("image"), (req, res) => 
     const errors = validateFormInput(req.body);
     if (errors.length > 0) {
         return res.status(400).render("recipe/add", {
-            errorMessage: `please provide ${errors.join(",")}.`,
+            errorMessage: `Please provide ${errors.join(",")}.`,
         });
     }
 
@@ -42,7 +42,7 @@ router.post("/add", isLoggedIn, uploadMiddleware.single("image"), (req, res) => 
 router.get("/:id", isLoggedIn, (req, res) => {
     const id = req.params.id;
     RecipeModel.find({ _id: id }).then(([data]) => {
-        let { name, origin, numServings, calorie, ingredients, instructions, cookTimeMinutes, imagepath, _id: id } = data;
+        let { name, origin, numServings, calorie, ingredients, instructions, cookTimeMinutes, imagePath, _id: id } = data;
         res.render(`recipe/detail`, { name, origin, numServings, calorie, ingredients, instructions, cookTimeMinutes, imagePath, id });
     })
 });
@@ -74,8 +74,6 @@ router.post("/update/:id", isLoggedIn, uploadMiddleware.single("image"), (req, r
     console.log("update id: ", id);
     console.log(req.body);
 
-
-
     const { name, origin, numServings, calorie, cookTimeMinutes, instructions, ingredients, username } = req.body
     RecipeModel.updateOne({ _id: id }, { $set: { name, origin, numServings, calorie, cookTimeMinutes, instructions, ingredients, imagePath, username } })
         .then(() => {
@@ -87,7 +85,7 @@ router.post("/update/:id", isLoggedIn, uploadMiddleware.single("image"), (req, r
 
 
 
-function validationFormInput(body) {
+function validateFormInput(body) {
     const inputFields = ['name', 'origin', 'numServings', 'calorie', 'cookTimeMinutes', 'instructions', 'ingredients'];
     const errors = [];
     for (let inputField of inputFields) {
