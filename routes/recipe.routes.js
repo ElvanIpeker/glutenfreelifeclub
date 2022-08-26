@@ -47,7 +47,7 @@ router.get("/:id", isLoggedIn, (req, res) => {
     })
 });
 
-router.get("delete/:id", isLoggedIn, (req, res) => {
+router.get("/delete/:id", isLoggedIn, (req, res) => {
     const id = req.params.id;
     const username = req.session.user.username;
     RecipeModel.deleteOne({ _id: id })
