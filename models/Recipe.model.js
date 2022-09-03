@@ -34,7 +34,12 @@ const recipeSchema = new Schema(
         imagePath: {
             type: String,
             required: true
+        },
+        username: {
+            type: String,
+            required: true
         }
+
 
 
 

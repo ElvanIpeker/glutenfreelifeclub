@@ -14,12 +14,13 @@
     </a>
     <div class="description">
       {{name}}
+      {{#if @root.owner}}
       <a href="/recipe/delete/{{id}}">
         <img class="icon" src="/images/delete_icon.png" />
       </a>
       <a href="/recipe/update/{{id}}">
         <img class="icon" src="/images/edit_icon.png" />
-      </a>
+      </a>{{/if}}
     </div>
   </div>
 
